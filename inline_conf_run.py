@@ -1,6 +1,6 @@
 # Originally forked by Alex Munoz "Python-Cisco-Backup" script https://github.com/AlexMunoz905/ by Ste Giraldo https://github.com/ste-giraldo
 # Refactoring + auto discover ssh/telnet by Blackbird
-ver = "python3-cisco-config ver. 1.5.0i - 2022-03-06 | https://github.com/bbird81/python3-cisco-config"
+ver = "python3-cisco-config ver. 2.0 - 2022-03-08 | https://github.com/bbird81/python3-cisco-config"
 
 # All pre-installed besides Netmiko.
 import csv
