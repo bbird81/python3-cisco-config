@@ -1,5 +1,5 @@
-# Forked by Alex Munoz "Python-Cisco-Backup" script https://github.com/AlexMunoz905/
-# Mods & improvements by Ste Giraldo https://github.com/ste-giraldo
+# Originally forked by Alex Munoz "Python-Cisco-Backup" script https://github.com/AlexMunoz905/ by Ste Giraldo https://github.com/ste-giraldo
+# Refactoring + auto discover ssh/telnet by Blackbird
 ver = "python3-cisco-config ver. 1.5.0i - 2022-03-06 | https://github.com/ste-giraldo"
 
 # All pre-installed besides Netmiko.
