@@ -73,19 +73,20 @@ def test_devices():
     '''
     Reads the CSV file, writes a file with non-pingable devices and returns a list of active_devices
     '''
-    print('ESEGUO TEST DEVICES')
     active_devices = []
     with open(csv_name, 'r') as csvfile:
         csv_reader = csv.DictReader(csvfile, delimiter=',')
         for ip in csv_reader:
-            print(str(ip['IP']))
+            print('Pinging '+str(ip['IP'])+'...', end='')
             ip_ping = ping(str(ip['IP']))
             if ip_ping == None:
                 fileName = "downDevices_" + dt_string + ".txt"
                 downDeviceOutput = open("result-config/" + fileName, "a")
                 downDeviceOutput.write(str(ip['IP']) + "\n")
-                print(str(ip['IP']) + " is down!")
-            else: active_devices.append(str(ip['IP']))
+                print(" is DOWN!")
+            else:
+                active_devices.append(str(ip['IP']))
+                print(" is UP!")
     return active_devices
 
 def get_saved_config(host, username, password, enable_secret, flag_host):
@@ -163,7 +164,7 @@ def main(argv):
 
     #ciclo sugli apparati UP: retrieve delle credenziali ed esecuzione dei comandi + backup config.
     for ip in active_devices:
-        print('VERIFICO '+ip)
+        print('Eseguo le operazioni su: '+ip)
         with open(csv_name, 'r') as csvfile:
             csv_reader = csv.DictReader(csvfile)
             #retrieve username/password
