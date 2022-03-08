@@ -1,2 +1,4 @@
 cisco_hosts.csv
 config_file
+.venv/*
+result-config/*
